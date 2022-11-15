@@ -14,5 +14,6 @@ jobs:
       - name: CONTAINER ACTION
         uses: ./.github/actions/docker-container-action
         with:
-          who-to-greet: 'Mona the Octocat'
+          args:
+            who-to-greet: 'Mona the Octocat'
 
