@@ -1,23 +1,11 @@
+---
+
 name: Run DC NJS Actions
 
 on: [push]
 
 jobs:
-  Public-Actions:
-    runs-on: ubuntu-latest
-
-    steps:
-      - run: echo "::debug::${{ inputs.who-to-greet }}"
-
-      - name: CONTAINER ACTION
-        uses: glebtee/me-docker-container-action@main
-        with:
-          who-to-greet: 'Mona the Octocat'
-
-      - name: DAD JOKE JS ACTION
-        uses: glebtee/writing-js-action@main
-  
-  Private-Actions:
+  Debug:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +15,4 @@ jobs:
         uses: ./.github/actions/docker-container-action
         with:
           who-to-greet: 'Mona the Octocat'
-      
-      - name: DAD JOKE JS ACTION
-        uses: ./.github/actions/joke-action
+
