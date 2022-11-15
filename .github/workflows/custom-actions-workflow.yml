@@ -1,6 +1,6 @@
 ---
 
-name: Run DC NJS Actions
+name: Debug actions
 
 on: [push]
 
